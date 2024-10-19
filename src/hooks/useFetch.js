@@ -4,7 +4,7 @@ export function authenticatedFetch(uri) {
   return fetch(uri, {
     method: "GET",
     headers: {
-      Authorization: `Bearer ${process.env.API_KEY}`,
+      Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
       Accept: "application/vnd.github.v3+json",
     },
   });
