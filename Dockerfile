@@ -13,6 +13,10 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+# Set environment variables for the build process
+ARG REACT_APP_API_KEY
+ENV REACT_APP_API_KEY=${REACT_APP_API_KEY}
+
 # Build the React app for production
 RUN npm run build
 
